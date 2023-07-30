@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { FastifyRequest, FastifyReply } from 'fastify';
 
-import { RegisterUseCase } from '@/use-cases/register';
+import { RegisterUseCase } from '@/use-cases/register/register';
 import { UserAlreadyExistsError } from '@/use-cases/erros/user-already-exists-error';
 import { PrismaUserRepository } from '@/repositories/prisma/prisma-users-repository';
 
@@ -33,4 +33,3 @@ export async function register(request: FastifyRequest, reply: FastifyReply) {
 
   return reply.status(201).send();
 }
-

@@ -1,7 +1,7 @@
 import { it, expect, describe } from 'vitest';
 import { compare } from 'bcryptjs';
 
-import { RegisterUseCase } from '@/use-cases/register';
+import { RegisterUseCase } from '@/use-cases/register/register';
 import { UserAlreadyExistsError } from '@/use-cases/erros/user-already-exists-error';
 import { InMemoryUserRepository } from '@/repositories/in-memory/in-memory-users-repository';
 
@@ -55,4 +55,3 @@ describe('Register Use Case', () => {
     ).rejects.toBeInstanceOf(UserAlreadyExistsError);
   });
 });
-
