@@ -1,8 +1,8 @@
 import { vi, it, expect, describe, beforeEach, afterEach } from 'vitest';
 
-import { ValidateCheckInUseCase } from '@/use-cases/validate-check-in/validate-check-in';
 import { ResourceNotFoundError } from '@/use-cases/erros/resource-not-found-error';
 import { LateCheckInValidationError } from '@/use-cases/erros/late-check-invalidation-error';
+import { ValidateCheckInUseCase } from '@/use-cases/cases/validate-check-in/validate-check-in';
 import { InMemoryCheckInRepository } from '@/repositories/in-memory/in-memory-check-in-repository';
 
 let checkInRepository: InMemoryCheckInRepository;
