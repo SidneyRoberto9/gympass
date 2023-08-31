@@ -1,8 +1,4 @@
-import { hash } from 'bcryptjs';
-
-import { User, Gym } from '@prisma/client';
-import { UserAlreadyExistsError } from '@/use-cases/erros/user-already-exists-error';
-import { UsersRepository } from '@/repositories/users-repository';
+import { Gym } from '@prisma/client';
 import { GymsRepository } from '@/repositories/gyms-repository';
 
 interface CreateGymUseCaseRequest {
