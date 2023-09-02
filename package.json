@@ -5,6 +5,7 @@
   "main": "src/app.ts",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "db:push": "prisma db push",
     "build": "tsup src --out-dir build",
     "start": "node build/server.js",
     "test": "vitest run --dir src/use-cases",
@@ -21,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fastify/cookie": "9.0.4",
     "@fastify/jwt": "7.2.0",
     "@prisma/client": "5.2.0",
     "bcryptjs": "2.4.3",
